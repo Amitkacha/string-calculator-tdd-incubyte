@@ -22,4 +22,12 @@ void main() {
     final calculator = StringCalculator();
     expect(calculator.add("1\n2,3"), 6);
   });
+
+  test('given a custom delimiter header, '
+      'when the add method is called, '
+      'then returns the sum using that custom delimiter', () {
+    final calculator = StringCalculator();
+    final result = calculator.add("//;\n1;2");
+    expect(result, 3);
+  });
 }
