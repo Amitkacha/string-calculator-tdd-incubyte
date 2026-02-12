@@ -10,4 +10,12 @@ void main() {
   print('Output: $customResult');
 
   print('Input: "1,2\\n3" -> Output: ${calculator.add("1,2\n3")}');
+
+  try {
+    print('Testing Negatives: "1,-2,3,-4"');
+    calculator.add("1,-2,3,-4");
+  } catch (e) {
+    // This will print the exception message
+    print('Caught expected error: $e');
+  }
 }

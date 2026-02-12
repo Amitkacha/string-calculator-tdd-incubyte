@@ -20,6 +20,12 @@ class StringCalculator {
         .map((s) => int.parse(s))
         .toList();
 
+    // For Negative Number
+    final List<int> negatives = nums.where((n) => n < 0).toList();
+    if (negatives.isNotEmpty) {
+      throw Exception("negatives not allowed: ${negatives.join(', ')}");
+    }
+
     return nums.fold(0, (sum, element) => sum + element);
   }
 }
