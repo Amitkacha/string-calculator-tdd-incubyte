@@ -8,4 +8,11 @@ void main() {
     final calculator = StringCalculator();
     expect(calculator.add(""), 0);
   });
+
+  test('given a string with two numbers, '
+      'when the add method is called, '
+      'then returns their sum', () {
+    final calculator = StringCalculator();
+    expect(calculator.add("1,5"), 6);
+  });
 }
