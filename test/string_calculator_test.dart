@@ -15,4 +15,11 @@ void main() {
     final calculator = StringCalculator();
     expect(calculator.add("1,5"), 6);
   });
+
+  test('given numbers separated by new lines, '
+      'when add is called, '
+      'then returns the sum', () {
+    final calculator = StringCalculator();
+    expect(calculator.add("1\n2,3"), 6);
+  });
 }
