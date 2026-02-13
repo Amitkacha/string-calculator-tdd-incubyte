@@ -52,4 +52,12 @@ void main() {
       },
     );
   });
+
+  test('given a custom delimiter and multiple lines of numbers, '
+      'when the add method is called, '
+      'then returns the sum of all numbers', () {
+    final calculator = StringCalculator();
+    final result = calculator.add("//;\n1;2\n3;4");
+    expect(result, 10);
+  });
 }
